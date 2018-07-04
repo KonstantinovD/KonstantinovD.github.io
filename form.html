@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Starbuzz Bean Machine</title>
+    <link rel="stylesheet" type="text/css" href="starbuzz.css">
+    <link rel="stylesheet"  type="text/css" href="accessform.css">
+  </head>
+  <body>
+    <header class="top">
+      <img id="headerLogo"
+           src="images/headerLogo.gif" alt="Starbuzz Coffee header logo image">
+      <img id="headerSlogan"
+          src="images/headerSlogan.gif" alt="Providing all the caffeine you need to power your life.">
+    </header>
+    <nav>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="blog.html">BLOG</a></li>
+      <li><a href="">RECIPES</a></li>
+      <li><a href="">LOCATIONS</a></li>
+    </ul>
+    </nav>
+    
+    <header>
+        <h1>The Starbuzz Bean Machine</h1>
+        <h2>Fill out the form below and click submit to order</h2>
+    </header>
+    <form action="http://starbuzzcoffee.com/processorder.php" method="POST">
+    <div class="formborder">
+    <fieldset>
+    <div class="tableRow">
+        <label for="beans">
+            Choose your beans:
+        </label>
+            <select name="beans" id="beans">
+                <option value="House Blend">House Blend</option>
+                <option value="Bolivia">Bolivia</option>
+                <option value="Guatemala">Guatemala</option>
+                <option value="Kenya">Kenya</option>
+            </select>
+    </div>
+    <div class="tableRow">
+        <label>Type:</label>
+        <p> <input type="radio" name="beantype" value="whole" id="whole_beantype">
+        <label for="whole_beantype">Whole bean</label><br>
+            <input type="radio" name="beantype" value="ground" id="ground_beantype" checked>
+             <label for="ground_beantype">Ground</label>
+        </p>
+    </div>
+    <div class="tableRow">
+        <label for="bags">Number of bags:</label> 
+        <input type="number" name="bags" min="1" max="10" id="bags">
+    </div>
+    <div class="tableRow">
+        <label for="date">Must arrive by date:</label>
+        <input type="date" name="date">
+    </div>
+    <div class="tableRow">
+        <label>Extras:</label>
+        <p>
+            <input type="checkbox" name="extras[]" value="giftwrap" id="giftwrap_extras">
+                <label for="giftwrap_extras">Gift wrap</label><br>
+            <input type="checkbox" name="extras[]" value="catalog" id="catalog_extras" checked>
+                <label for="catalog_extras">Include catalog with order</label>
+        </p>
+    </div>
+    </fieldset>
+    
+    <fieldset>
+    <div class="tableRow">
+        <legend>Ship to: </legend>
+    <div class="tableRow">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="" placeholder="Ivan Ivanov" required>
+        <!-- placeholder shows pattern (ivan ivanov), but it uses pale color, deletes automatically after putting cursor into text field 
+        and if you don't input any text the pattern value will not be sent to server-->
+    </div>
+    <div class="tableRow">
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" value="" required> 
+    </div>
+    <div class="tableRow">
+        <label for="city">City:</label>
+	    <input type="text" id="city" name="city" value="" placeholder="Minsk" required> 
+    </div>
+    <div class="tableRow">
+        <label for="state">State:</label>
+	    <input type="text" id="state" name="state" value="" placeholder="Belarus" required> 
+    </div>
+    <div class="tableRow">
+        <label for="zip">Zip code:</label>
+        <input type="text" id="zip" name="zip" value="" required>
+    </div>
+    <div class="tableRow">
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" value="" placeholder="+375*********" required>
+    </div>
+    <div class="tableRow">
+        <label for="comments">Customer Comments:</label>
+        <textarea id="comments" name="comments"></textarea>
+    </div>
+    <div class="tableRow">
+        <label></label>
+        <input type="submit" value="Order Now">
+    </div>
+    </div>
+    </fieldset>
+    </div>
+    </form>
+    
+    
+    <footer>
+      &copy; 2012, Starbuzz Coffee
+      <br>
+      All trademarks and registered trademarks appearing on 
+      this site are the property of their respective owners.
+    </footer>
+    
+  </body>
+</html>
+
